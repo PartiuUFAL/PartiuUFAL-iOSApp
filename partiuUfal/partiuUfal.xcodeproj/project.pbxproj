@@ -54,14 +54,22 @@
 		EA1433961E6A03AA00578F36 /* partiuUfal */ = {
 			isa = PBXGroup;
 			children = (
-				EA1433971E6A03AA00578F36 /* AppDelegate.swift */,
+				EA5954111E6B2FDF0066A6FA /* Supporting Files */,
 				EA1433991E6A03AA00578F36 /* ViewController.swift */,
 				EA14339B1E6A03AA00578F36 /* Main.storyboard */,
 				EA14339E1E6A03AA00578F36 /* Assets.xcassets */,
+			);
+			path = partiuUfal;
+			sourceTree = "<group>";
+		};
+		EA5954111E6B2FDF0066A6FA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EA1433971E6A03AA00578F36 /* AppDelegate.swift */,
 				EA1433A01E6A03AA00578F36 /* LaunchScreen.storyboard */,
 				EA1433A31E6A03AA00578F36 /* Info.plist */,
 			);
-			path = partiuUfal;
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,6 +310,7 @@
 				EA1433A81E6A03AA00578F36 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
