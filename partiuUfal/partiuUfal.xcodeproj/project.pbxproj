@@ -12,6 +12,7 @@
 		EA14339D1E6A03AA00578F36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA14339B1E6A03AA00578F36 /* Main.storyboard */; };
 		EA14339F1E6A03AA00578F36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA14339E1E6A03AA00578F36 /* Assets.xcassets */; };
 		EA1433A21E6A03AA00578F36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA1433A01E6A03AA00578F36 /* LaunchScreen.storyboard */; };
+		EA82CD811E6CFC2000C794E9 /* InitialPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA82CD801E6CFC2000C794E9 /* InitialPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		EA14339E1E6A03AA00578F36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA1433A11E6A03AA00578F36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA1433A31E6A03AA00578F36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA82CD801E6CFC2000C794E9 /* InitialPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				EA5954111E6B2FDF0066A6FA /* Supporting Files */,
 				EA1433991E6A03AA00578F36 /* ViewController.swift */,
 				EA14339B1E6A03AA00578F36 /* Main.storyboard */,
+				EA82CD801E6CFC2000C794E9 /* InitialPageViewController.swift */,
 				EA14339E1E6A03AA00578F36 /* Assets.xcassets */,
 			);
 			path = partiuUfal;
@@ -147,6 +150,7 @@
 			files = (
 				EA14339A1E6A03AA00578F36 /* ViewController.swift in Sources */,
 				EA1433981E6A03AA00578F36 /* AppDelegate.swift in Sources */,
+				EA82CD811E6CFC2000C794E9 /* InitialPageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
