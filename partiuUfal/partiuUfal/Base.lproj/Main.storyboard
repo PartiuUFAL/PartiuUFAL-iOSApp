@@ -134,10 +134,10 @@
             </objects>
             <point key="canvasLocation" x="2434" y="-967"/>
         </scene>
-        <!--View Controller-->
+        <!--Log In View Controller-->
         <scene sceneID="KmR-X9-SNQ">
             <objects>
-                <viewController id="iuK-Qw-aWc" sceneMemberID="viewController">
+                <viewController id="iuK-Qw-aWc" customClass="LogInViewController" customModule="partiuUfal" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YNr-ka-A8t"/>
                         <viewControllerLayoutGuide type="bottom" id="2fs-Qg-C0m"/>
@@ -159,7 +159,7 @@
                                         <rect key="frame" x="0.0" y="40" width="343" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -173,6 +173,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="login" destination="iuK-Qw-aWc" eventType="touchUpInside" id="0in-47-Cii"/>
                                     <segue destination="3PX-sa-cGx" kind="show" id="jeK-oi-Yrs"/>
                                 </connections>
                             </button>
@@ -203,6 +204,10 @@
                             <constraint firstItem="2fs-Qg-C0m" firstAttribute="top" secondItem="WfV-78-Qqa" secondAttribute="bottom" constant="8" id="wsy-To-XU6"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="gl4-GH-fRb" id="v8Z-Ev-KaC"/>
+                        <outlet property="senhaTextField" destination="KZt-1C-KlR" id="riu-qn-bB3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9wr-Vf-FA9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -599,7 +604,7 @@
         <!--Cadastre-se-->
         <scene sceneID="Nx6-kg-R5b">
             <objects>
-                <viewController id="dxZ-4i-Uep" sceneMemberID="viewController">
+                <viewController id="dxZ-4i-Uep" customClass="CadastroViewController" customModule="partiuUfal" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Apb-la-gaX"/>
                         <viewControllerLayoutGuide type="bottom" id="h1B-Tk-yiO"/>
@@ -624,37 +629,43 @@
                                 <rect key="frame" x="16" y="68" width="343" height="298"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7GT-rV-itO">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="43"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="35.5"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sobrenome" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GVq-cx-pTT">
-                                        <rect key="frame" x="0.0" y="51" width="343" height="43"/>
+                                        <rect key="frame" x="0.0" y="43.5" width="343" height="36"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CPF" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3YZ-HT-lDx">
-                                        <rect key="frame" x="0.0" y="102" width="343" height="43"/>
+                                        <rect key="frame" x="0.0" y="87.5" width="343" height="35.5"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nº da Matrícula" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rdM-qI-ReO">
-                                        <rect key="frame" x="0.0" y="153" width="343" height="43"/>
+                                        <rect key="frame" x="0.0" y="131" width="343" height="36"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="67m-81-qZc">
-                                        <rect key="frame" x="0.0" y="204" width="343" height="43"/>
+                                        <rect key="frame" x="0.0" y="175" width="343" height="35.5"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fAF-3i-TID">
+                                        <rect key="frame" x="0.0" y="218.5" width="343" height="36"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Telefone" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qU7-rs-iBe">
-                                        <rect key="frame" x="0.0" y="255" width="343" height="43"/>
+                                        <rect key="frame" x="0.0" y="262.5" width="343" height="35.5"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -662,81 +673,76 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="5fi-VB-Iwm" userLabel="Modo Motorista Stack View">
-                                <rect key="frame" x="16" y="390" width="343" height="20.5"/>
+                                <rect key="frame" x="16" y="390" width="343" height="31"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Modo Motorista" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SwC-vj-GpU">
-                                        <rect key="frame" x="0.0" y="0.0" width="220.5" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Modo Motorista" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SwC-vj-GpU">
+                                        <rect key="frame" x="0.0" y="0.0" width="220.5" height="31"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ativado" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kY6-c1-FRP">
-                                        <rect key="frame" x="228.5" y="0.0" width="57.5" height="20.5"/>
+                                        <rect key="frame" x="228.5" y="0.0" width="57.5" height="31"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" onImage="I" translatesAutoresizingMaskIntoConstraints="NO" id="avB-WX-chE">
-                                        <rect key="frame" x="294" y="0.0" width="51" height="20.5"/>
+                                        <rect key="frame" x="294" y="0.0" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="switchModoMotorista:" destination="dxZ-4i-Uep" eventType="valueChanged" id="0vW-Rk-AzU"/>
+                                        </connections>
                                     </switch>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Hzm-4Y-8gE" userLabel="Motorista Stack View">
-                                <rect key="frame" x="16" y="434.5" width="343" height="69"/>
+                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Hzm-4Y-8gE" userLabel="Motorista Stack View">
+                                <rect key="frame" x="16" y="435" width="343" height="144"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Modelo e Marca do Veículo" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y3g-uG-mKc">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="17.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Placa" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MgU-Kl-qAR">
-                                        <rect key="frame" x="0.0" y="25.5" width="343" height="18"/>
+                                        <rect key="frame" x="0.0" y="38" width="343" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Cor" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D8w-ZF-BGE">
-                                        <rect key="frame" x="0.0" y="51.5" width="343" height="17.5"/>
+                                        <rect key="frame" x="0.0" y="76" width="343" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="reo-CG-Klh">
-                                <rect key="frame" x="108" y="527.5" width="160" height="20.5"/>
-                                <subviews>
-                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TDL-60-0ZU">
-                                        <rect key="frame" x="0.0" y="0.0" width="22" height="20.5"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ury-B0-Bbo">
+                                        <rect key="frame" x="0.0" y="114" width="343" height="30"/>
+                                        <state key="normal" title="+ Adicionar Carro"/>
+                                        <connections>
+                                            <action selector="addCarro" destination="dxZ-4i-Uep" eventType="touchUpInside" id="I86-Xn-gc6"/>
+                                        </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adicionar veículo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QIM-6X-QXb">
-                                        <rect key="frame" x="30" y="0.0" width="130" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TfH-DO-2N5">
-                                <rect key="frame" x="40" y="572" width="295" height="30"/>
+                                <rect key="frame" x="40" y="621" width="295" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Concluir cadastro">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="concluirCadastro" destination="dxZ-4i-Uep" eventType="touchUpInside" id="EDB-Oo-zmf"/>
                                     <segue destination="A50-sV-vUA" kind="show" id="fFn-dv-G1T"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="TfH-DO-2N5" firstAttribute="top" secondItem="reo-CG-Klh" secondAttribute="bottom" constant="24" id="4GX-I9-IKk"/>
                             <constraint firstItem="5fi-VB-Iwm" firstAttribute="top" secondItem="eYi-uC-h6Q" secondAttribute="bottom" constant="24" id="9Rk-Xf-bYd"/>
                             <constraint firstItem="eYi-uC-h6Q" firstAttribute="top" secondItem="lr1-4m-4Fm" secondAttribute="top" constant="68" id="Aww-D6-8wh"/>
                             <constraint firstItem="0yG-in-eeY" firstAttribute="leading" secondItem="lr1-4m-4Fm" secondAttribute="leading" id="Eae-aZ-LTP"/>
                             <constraint firstItem="h1B-Tk-yiO" firstAttribute="top" secondItem="TfH-DO-2N5" secondAttribute="bottom" constant="16" id="Ekw-Ig-AhI"/>
-                            <constraint firstItem="reo-CG-Klh" firstAttribute="centerX" secondItem="lr1-4m-4Fm" secondAttribute="centerX" id="GJO-Md-0Lp"/>
                             <constraint firstAttribute="trailingMargin" secondItem="5fi-VB-Iwm" secondAttribute="trailing" id="IFT-lE-yNo"/>
                             <constraint firstItem="Hzm-4Y-8gE" firstAttribute="leading" secondItem="lr1-4m-4Fm" secondAttribute="leadingMargin" id="QVk-5q-TkN"/>
                             <constraint firstItem="Hzm-4Y-8gE" firstAttribute="top" secondItem="5fi-VB-Iwm" secondAttribute="bottom" constant="24" id="Whb-yw-9Mo"/>
@@ -747,12 +753,25 @@
                             <constraint firstAttribute="trailing" secondItem="0yG-in-eeY" secondAttribute="trailing" id="kbq-fD-hJB"/>
                             <constraint firstItem="TfH-DO-2N5" firstAttribute="leading" secondItem="lr1-4m-4Fm" secondAttribute="leadingMargin" constant="24" id="koS-C8-fTv"/>
                             <constraint firstItem="5fi-VB-Iwm" firstAttribute="leading" secondItem="lr1-4m-4Fm" secondAttribute="leadingMargin" id="nYK-WV-jj9"/>
-                            <constraint firstItem="reo-CG-Klh" firstAttribute="top" secondItem="Hzm-4Y-8gE" secondAttribute="bottom" constant="24" id="ngr-Pq-y0t"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Hzm-4Y-8gE" secondAttribute="trailing" id="rMI-bh-UNO"/>
                             <constraint firstItem="0yG-in-eeY" firstAttribute="top" secondItem="Apb-la-gaX" secondAttribute="bottom" id="vXS-7b-AGB"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Cadastre-se" id="Le7-ms-hCN"/>
+                    <connections>
+                        <outlet property="corTextField" destination="D8w-ZF-BGE" id="s0L-Th-Tne"/>
+                        <outlet property="cpfTextField" destination="3YZ-HT-lDx" id="cdH-JU-1JJ"/>
+                        <outlet property="emailTextField" destination="67m-81-qZc" id="ntF-mv-IOz"/>
+                        <outlet property="matriculaTextField" destination="rdM-qI-ReO" id="hDe-cV-UrT"/>
+                        <outlet property="modeloTextField" destination="y3g-uG-mKc" id="eiG-9L-Vyp"/>
+                        <outlet property="modoMotoristaSwitch" destination="avB-WX-chE" id="Hql-lG-qcC"/>
+                        <outlet property="motoristaStackView" destination="Hzm-4Y-8gE" id="NZY-xG-97Z"/>
+                        <outlet property="nomeTextField" destination="7GT-rV-itO" id="EHl-LH-idG"/>
+                        <outlet property="placaTextField" destination="MgU-Kl-qAR" id="pj8-lX-cyP"/>
+                        <outlet property="senhaTextField" destination="fAF-3i-TID" id="aHj-Sn-fPB"/>
+                        <outlet property="sobrenomeTextField" destination="GVq-cx-pTT" id="4Ip-2c-7F6"/>
+                        <outlet property="telefoneTextField" destination="qU7-rs-iBe" id="Y8Z-8k-rcL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YCK-5K-Llz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1051,8 +1070,8 @@
         <image name="I" width="16" height="16"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="EeW-TZ-rtq"/>
         <segue reference="UqT-4j-zLz"/>
-        <segue reference="Sc2-rM-VLu"/>
+        <segue reference="EeW-TZ-rtq"/>
+        <segue reference="KLh-Si-eCV"/>
     </inferredMetricsTieBreakers>
 </document>
