@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF9A50861E6F37FC009EE1E6 /* MinhasCaronasTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9A50851E6F37FC009EE1E6 /* MinhasCaronasTableViewController.swift */; };
 		3F52E1331E6F30C300A6844E /* Carro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F52E1321E6F30C300A6844E /* Carro.swift */; };
 		3F52E1351E6F317100A6844E /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F52E1341E6F317100A6844E /* Usuario.swift */; };
 		3F52E1371E6F331E00A6844E /* Carona.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F52E1361E6F331E00A6844E /* Carona.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CF9A50851E6F37FC009EE1E6 /* MinhasCaronasTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinhasCaronasTableViewController.swift; sourceTree = "<group>"; };
 		3F52E1321E6F30C300A6844E /* Carro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Carro.swift; sourceTree = "<group>"; };
 		3F52E1341E6F317100A6844E /* Usuario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Usuario.swift; path = ../Usuario.swift; sourceTree = "<group>"; };
 		3F52E1361E6F331E00A6844E /* Carona.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Carona.swift; sourceTree = "<group>"; };
@@ -100,6 +102,10 @@
 			children = (
 				3F52E13A1E6F369600A6844E /* Model */,
 				EA5954111E6B2FDF0066A6FA /* Supporting Files */,
+				EA1433991E6A03AA00578F36 /* ViewController.swift */,
+				EA14339B1E6A03AA00578F36 /* Main.storyboard */,
+				CF9A50851E6F37FC009EE1E6 /* MinhasCaronasTableViewController.swift */,
+				EA82CD801E6CFC2000C794E9 /* InitialPageViewController.swift */,
 				3F52E13B1E6F36A800A6844E /* Controller */,
 				3F52E13C1E6F36B100A6844E /* View */,
 				EA14339E1E6A03AA00578F36 /* Assets.xcassets */,
@@ -197,6 +203,7 @@
 				EA1433981E6A03AA00578F36 /* AppDelegate.swift in Sources */,
 				3F52E1351E6F317100A6844E /* Usuario.swift in Sources */,
 				EA82CD811E6CFC2000C794E9 /* InitialPageViewController.swift in Sources */,
+				CF9A50861E6F37FC009EE1E6 /* MinhasCaronasTableViewController.swift in Sources */,
 				3F52E1401E6F4A8200A6844E /* Sistema.swift in Sources */,
 				3F52E13E1E6F397600A6844E /* CadastroViewController.swift in Sources */,
 			);
