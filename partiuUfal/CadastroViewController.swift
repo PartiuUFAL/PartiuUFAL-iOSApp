@@ -43,12 +43,23 @@ class CadastroViewController: UIViewController {
         let senha = senhaTextField.text!
         let telefone = telefoneTextField.text!
         novoUsuario = Usuario(nome: nome, sobrenome: sobrenome, cpf: cpf, matricula: matricula, email: email, senha: senha, telefone: telefone)
-        
+        Sistema.usuarioAtual = novoUsuario
         //Enviar cadastro para o banco de dados
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        motoristaStackView.isHidden = false
+        motoristaStackView.isHidden = !modoMotoristaSwitch.isOn
+        
+        if(!Sistema.usuarioEhNulo()) {
+            let auxUsuario = Sistema.usuarioAtual!
+            nomeTextField.text = auxUsuario.nome
+            sobrenomeTextField.text = auxUsuario.sobrenome
+            cpfTextField.text = auxUsuario.cpf
+            matriculaTextField.text = auxUsuario.matricula
+            emailTextField.text = auxUsuario.email
+            modoMotoristaSwitch.isOn = (auxUsuario.carros.count > 0)
+            telefoneTextField.text = auxUsuario.telefone
+        }
         // Do any additional setup after loading the view.
     }
 
