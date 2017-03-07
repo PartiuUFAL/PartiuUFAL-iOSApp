@@ -50,7 +50,8 @@ class MinhasCaronasTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "infoCellIdentifier", for: indexPath)
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "caronaOferecidaIdentifier", for: indexPath)
         
         let seção = data[indexPath.section].1
         let filme = seção[indexPath.row]
