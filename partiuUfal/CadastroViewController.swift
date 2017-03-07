@@ -25,15 +25,26 @@ class CadastroViewController: UIViewController {
     @IBOutlet weak var placaTextField: UITextField!
     @IBOutlet weak var corTextField: UITextField!
     
+    @IBOutlet weak var switchModoMotorista: UISwitch!
+    
+    @IBOutlet weak var statusModoMotorista: UILabel!
+    
     @IBAction func switchModoMotorista(_ sender: Any) {
         motoristaStackView.isHidden = !modoMotoristaSwitch.isOn
+        if modoMotoristaSwitch.isOn {
+            statusModoMotorista.text = "Ativado"
+        } else {
+            statusModoMotorista.text = "Desativado"
+        }
     }
-    @IBAction func addCarro() {
+    
+    @IBAction func addCarro(_ sender: Any) {
         let modelo = modeloTextField.text!
         let placa = placaTextField.text!
         let cor = corTextField.text!
         carros.append(Carro(modelo: modelo, placa: placa, cor: cor))
     }
+
     @IBAction func concluirCadastro() {
         let nome = nomeTextField.text!
         let sobrenome = sobrenomeTextField.text!
@@ -46,6 +57,7 @@ class CadastroViewController: UIViewController {
         Sistema.usuarioAtual = novoUsuario
         //Enviar cadastro para o banco de dados
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         motoristaStackView.isHidden = !modoMotoristaSwitch.isOn
