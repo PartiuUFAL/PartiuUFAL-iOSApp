@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF9A50861E6F37FC009EE1E6 /* MinhasCaronasTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9A50851E6F37FC009EE1E6 /* MinhasCaronasTableViewController.swift */; };
 		EA1433981E6A03AA00578F36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1433971E6A03AA00578F36 /* AppDelegate.swift */; };
 		EA14339A1E6A03AA00578F36 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1433991E6A03AA00578F36 /* ViewController.swift */; };
 		EA14339D1E6A03AA00578F36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA14339B1E6A03AA00578F36 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CF9A50851E6F37FC009EE1E6 /* MinhasCaronasTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinhasCaronasTableViewController.swift; sourceTree = "<group>"; };
 		EA1433941E6A03AA00578F36 /* partiuUfal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = partiuUfal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA1433971E6A03AA00578F36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA1433991E6A03AA00578F36 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				EA5954111E6B2FDF0066A6FA /* Supporting Files */,
 				EA1433991E6A03AA00578F36 /* ViewController.swift */,
 				EA14339B1E6A03AA00578F36 /* Main.storyboard */,
+				CF9A50851E6F37FC009EE1E6 /* MinhasCaronasTableViewController.swift */,
 				EA82CD801E6CFC2000C794E9 /* InitialPageViewController.swift */,
 				EA14339E1E6A03AA00578F36 /* Assets.xcassets */,
 			);
@@ -151,6 +154,7 @@
 				EA14339A1E6A03AA00578F36 /* ViewController.swift in Sources */,
 				EA1433981E6A03AA00578F36 /* AppDelegate.swift in Sources */,
 				EA82CD811E6CFC2000C794E9 /* InitialPageViewController.swift in Sources */,
+				CF9A50861E6F37FC009EE1E6 /* MinhasCaronasTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
