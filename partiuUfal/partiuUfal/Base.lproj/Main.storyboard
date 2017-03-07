@@ -147,7 +147,7 @@
                                         <rect key="frame" x="0.0" y="40" width="343" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -191,6 +191,10 @@
                             <constraint firstItem="2fs-Qg-C0m" firstAttribute="top" secondItem="WfV-78-Qqa" secondAttribute="bottom" constant="8" id="wsy-To-XU6"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="gl4-GH-fRb" id="v8Z-Ev-KaC"/>
+                        <outlet property="senhaTextField" destination="KZt-1C-KlR" id="riu-qn-bB3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9wr-Vf-FA9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -636,37 +640,43 @@
                                 <rect key="frame" x="16" y="68" width="343" height="298"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7GT-rV-itO">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="43"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="35.5"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sobrenome" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GVq-cx-pTT">
-                                        <rect key="frame" x="0.0" y="51" width="343" height="43"/>
+                                        <rect key="frame" x="0.0" y="43.5" width="343" height="36"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CPF" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3YZ-HT-lDx">
-                                        <rect key="frame" x="0.0" y="102" width="343" height="43"/>
+                                        <rect key="frame" x="0.0" y="87.5" width="343" height="35.5"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nº da Matrícula" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rdM-qI-ReO">
-                                        <rect key="frame" x="0.0" y="153" width="343" height="43"/>
+                                        <rect key="frame" x="0.0" y="131" width="343" height="36"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="67m-81-qZc">
-                                        <rect key="frame" x="0.0" y="204" width="343" height="43"/>
+                                        <rect key="frame" x="0.0" y="175" width="343" height="35.5"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fAF-3i-TID">
+                                        <rect key="frame" x="0.0" y="218.5" width="343" height="36"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Telefone" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qU7-rs-iBe">
-                                        <rect key="frame" x="0.0" y="255" width="343" height="43"/>
+                                        <rect key="frame" x="0.0" y="262.5" width="343" height="35.5"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -728,6 +738,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TfH-DO-2N5">
@@ -737,18 +748,17 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="concluirCadastro" destination="dxZ-4i-Uep" eventType="touchUpInside" id="EDB-Oo-zmf"/>
                                     <segue destination="A50-sV-vUA" kind="show" id="fFn-dv-G1T"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="TfH-DO-2N5" firstAttribute="top" secondItem="reo-CG-Klh" secondAttribute="bottom" constant="24" id="4GX-I9-IKk"/>
                             <constraint firstItem="5fi-VB-Iwm" firstAttribute="top" secondItem="eYi-uC-h6Q" secondAttribute="bottom" constant="24" id="9Rk-Xf-bYd"/>
                             <constraint firstItem="eYi-uC-h6Q" firstAttribute="top" secondItem="lr1-4m-4Fm" secondAttribute="top" constant="68" id="Aww-D6-8wh"/>
                             <constraint firstItem="0yG-in-eeY" firstAttribute="leading" secondItem="lr1-4m-4Fm" secondAttribute="leading" id="Eae-aZ-LTP"/>
                             <constraint firstItem="h1B-Tk-yiO" firstAttribute="top" secondItem="TfH-DO-2N5" secondAttribute="bottom" constant="16" id="Ekw-Ig-AhI"/>
-                            <constraint firstItem="reo-CG-Klh" firstAttribute="centerX" secondItem="lr1-4m-4Fm" secondAttribute="centerX" id="GJO-Md-0Lp"/>
                             <constraint firstAttribute="trailingMargin" secondItem="5fi-VB-Iwm" secondAttribute="trailing" id="IFT-lE-yNo"/>
                             <constraint firstItem="Hzm-4Y-8gE" firstAttribute="leading" secondItem="lr1-4m-4Fm" secondAttribute="leadingMargin" id="QVk-5q-TkN"/>
                             <constraint firstItem="Hzm-4Y-8gE" firstAttribute="top" secondItem="5fi-VB-Iwm" secondAttribute="bottom" constant="24" id="Whb-yw-9Mo"/>
@@ -759,12 +769,25 @@
                             <constraint firstAttribute="trailing" secondItem="0yG-in-eeY" secondAttribute="trailing" id="kbq-fD-hJB"/>
                             <constraint firstItem="TfH-DO-2N5" firstAttribute="leading" secondItem="lr1-4m-4Fm" secondAttribute="leadingMargin" constant="24" id="koS-C8-fTv"/>
                             <constraint firstItem="5fi-VB-Iwm" firstAttribute="leading" secondItem="lr1-4m-4Fm" secondAttribute="leadingMargin" id="nYK-WV-jj9"/>
-                            <constraint firstItem="reo-CG-Klh" firstAttribute="top" secondItem="Hzm-4Y-8gE" secondAttribute="bottom" constant="24" id="ngr-Pq-y0t"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Hzm-4Y-8gE" secondAttribute="trailing" id="rMI-bh-UNO"/>
                             <constraint firstItem="0yG-in-eeY" firstAttribute="top" secondItem="Apb-la-gaX" secondAttribute="bottom" id="vXS-7b-AGB"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Cadastre-se" id="Le7-ms-hCN"/>
+                    <connections>
+                        <outlet property="corTextField" destination="D8w-ZF-BGE" id="s0L-Th-Tne"/>
+                        <outlet property="cpfTextField" destination="3YZ-HT-lDx" id="cdH-JU-1JJ"/>
+                        <outlet property="emailTextField" destination="67m-81-qZc" id="ntF-mv-IOz"/>
+                        <outlet property="matriculaTextField" destination="rdM-qI-ReO" id="hDe-cV-UrT"/>
+                        <outlet property="modeloTextField" destination="y3g-uG-mKc" id="eiG-9L-Vyp"/>
+                        <outlet property="modoMotoristaSwitch" destination="avB-WX-chE" id="Hql-lG-qcC"/>
+                        <outlet property="motoristaStackView" destination="Hzm-4Y-8gE" id="NZY-xG-97Z"/>
+                        <outlet property="nomeTextField" destination="7GT-rV-itO" id="EHl-LH-idG"/>
+                        <outlet property="placaTextField" destination="MgU-Kl-qAR" id="pj8-lX-cyP"/>
+                        <outlet property="senhaTextField" destination="fAF-3i-TID" id="aHj-Sn-fPB"/>
+                        <outlet property="sobrenomeTextField" destination="GVq-cx-pTT" id="4Ip-2c-7F6"/>
+                        <outlet property="telefoneTextField" destination="qU7-rs-iBe" id="Y8Z-8k-rcL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YCK-5K-Llz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
