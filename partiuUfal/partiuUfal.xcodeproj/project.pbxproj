@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F4B65961E70876B00314392 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F4B65951E70876B00314392 /* GoogleService-Info.plist */; };
 		3F52E1331E6F30C300A6844E /* Carro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F52E1321E6F30C300A6844E /* Carro.swift */; };
 		3F52E1351E6F317100A6844E /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F52E1341E6F317100A6844E /* Usuario.swift */; };
 		3F52E1371E6F331E00A6844E /* Carona.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F52E1361E6F331E00A6844E /* Carona.swift */; };
 		3F52E1391E6F364700A6844E /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F52E1381E6F364700A6844E /* LogInViewController.swift */; };
 		3F52E13E1E6F397600A6844E /* CadastroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F52E13D1E6F397600A6844E /* CadastroViewController.swift */; };
 		3F52E1401E6F4A8200A6844E /* Sistema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F52E13F1E6F4A8200A6844E /* Sistema.swift */; };
+		B26068389947003F7DBA7AF8 /* Pods_partiuUfal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBCCC76C70DBB9E4DBA26745 /* Pods_partiuUfal.framework */; };
 		CF9A50861E6F37FC009EE1E6 /* MinhasCaronasTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9A50851E6F37FC009EE1E6 /* MinhasCaronasTableViewController.swift */; };
 		EA1433981E6A03AA00578F36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1433971E6A03AA00578F36 /* AppDelegate.swift */; };
 		EA14339D1E6A03AA00578F36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA14339B1E6A03AA00578F36 /* Main.storyboard */; };
@@ -22,12 +24,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F4B65951E70876B00314392 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3F52E1321E6F30C300A6844E /* Carro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Carro.swift; sourceTree = "<group>"; };
 		3F52E1341E6F317100A6844E /* Usuario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Usuario.swift; path = ../Usuario.swift; sourceTree = "<group>"; };
 		3F52E1361E6F331E00A6844E /* Carona.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Carona.swift; sourceTree = "<group>"; };
 		3F52E1381E6F364700A6844E /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		3F52E13D1E6F397600A6844E /* CadastroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CadastroViewController.swift; path = ../CadastroViewController.swift; sourceTree = "<group>"; };
 		3F52E13F1E6F4A8200A6844E /* Sistema.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Sistema.swift; path = ../Sistema.swift; sourceTree = "<group>"; };
+		C5D537699E7473C6F4F2ECDB /* Pods-partiuUfal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-partiuUfal.debug.xcconfig"; path = "Pods/Target Support Files/Pods-partiuUfal/Pods-partiuUfal.debug.xcconfig"; sourceTree = "<group>"; };
 		CF9A50851E6F37FC009EE1E6 /* MinhasCaronasTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinhasCaronasTableViewController.swift; sourceTree = "<group>"; };
 		EA1433941E6A03AA00578F36 /* partiuUfal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = partiuUfal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA1433971E6A03AA00578F36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +40,8 @@
 		EA1433A11E6A03AA00578F36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA1433A31E6A03AA00578F36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA82CD801E6CFC2000C794E9 /* InitialPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialPageViewController.swift; sourceTree = "<group>"; };
+		EBCCC76C70DBB9E4DBA26745 /* Pods_partiuUfal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_partiuUfal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F70D812C9A2586E6B3954FFA /* Pods-partiuUfal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-partiuUfal.release.xcconfig"; path = "Pods/Target Support Files/Pods-partiuUfal/Pods-partiuUfal.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B26068389947003F7DBA7AF8 /* Pods_partiuUfal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,11 +85,30 @@
 			name = View;
 			sourceTree = "<group>";
 		};
+		69DF4CF0750043A170C0716D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EBCCC76C70DBB9E4DBA26745 /* Pods_partiuUfal.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E5E220FF4173E93952DEDCB8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C5D537699E7473C6F4F2ECDB /* Pods-partiuUfal.debug.xcconfig */,
+				F70D812C9A2586E6B3954FFA /* Pods-partiuUfal.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		EA14338B1E6A03AA00578F36 = {
 			isa = PBXGroup;
 			children = (
 				EA1433961E6A03AA00578F36 /* partiuUfal */,
 				EA1433951E6A03AA00578F36 /* Products */,
+				E5E220FF4173E93952DEDCB8 /* Pods */,
+				69DF4CF0750043A170C0716D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,6 +126,7 @@
 				3F52E13A1E6F369600A6844E /* Model */,
 				EA5954111E6B2FDF0066A6FA /* Supporting Files */,
 				EA14339B1E6A03AA00578F36 /* Main.storyboard */,
+				3F4B65951E70876B00314392 /* GoogleService-Info.plist */,
 				3F52E13B1E6F36A800A6844E /* Controller */,
 				3F52E13C1E6F36B100A6844E /* View */,
 				EA14339E1E6A03AA00578F36 /* Assets.xcassets */,
@@ -124,9 +151,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EA1433A61E6A03AA00578F36 /* Build configuration list for PBXNativeTarget "partiuUfal" */;
 			buildPhases = (
+				CD2C86E444840CE2BD6E1313 /* [CP] Check Pods Manifest.lock */,
 				EA1433901E6A03AA00578F36 /* Sources */,
 				EA1433911E6A03AA00578F36 /* Frameworks */,
 				EA1433921E6A03AA00578F36 /* Resources */,
+				4295EC0B90A12A6103565E86 /* [CP] Embed Pods Frameworks */,
+				0493D3A01C23DF8F0B95D24A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -178,12 +208,61 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA1433A21E6A03AA00578F36 /* LaunchScreen.storyboard in Resources */,
+				3F4B65961E70876B00314392 /* GoogleService-Info.plist in Resources */,
 				EA14339F1E6A03AA00578F36 /* Assets.xcassets in Resources */,
 				EA14339D1E6A03AA00578F36 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0493D3A01C23DF8F0B95D24A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-partiuUfal/Pods-partiuUfal-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4295EC0B90A12A6103565E86 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-partiuUfal/Pods-partiuUfal-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CD2C86E444840CE2BD6E1313 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EA1433901E6A03AA00578F36 /* Sources */ = {
@@ -319,6 +398,7 @@
 		};
 		EA1433A71E6A03AA00578F36 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C5D537699E7473C6F4F2ECDB /* Pods-partiuUfal.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3FCFAP98B3;
@@ -332,6 +412,7 @@
 		};
 		EA1433A81E6A03AA00578F36 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F70D812C9A2586E6B3954FFA /* Pods-partiuUfal.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3FCFAP98B3;

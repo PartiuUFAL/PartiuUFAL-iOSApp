@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="HQ4-7H-amO">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="HQ4-7H-amO">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -256,7 +256,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Endereço final" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gnw-OG-khZ">
-                                                            <rect key="frame" x="38" y="24" width="108" height="20.5"/>
+                                                            <rect key="frame" x="38" y="24" width="108" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -704,7 +704,7 @@
                                         <rect key="frame" x="0.0" y="94.5" width="288" height="172.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descrição:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="smh-Vq-vEf">
-                                                <rect key="frame" x="0.0" y="0.0" width="91" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="91" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -722,7 +722,7 @@
                                         <rect key="frame" x="0.0" y="275" width="343" height="61"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Quantidade de vagas disponíveis:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6DM-hf-D5x">
-                                                <rect key="frame" x="30" y="0.0" width="283.5" height="20.5"/>
+                                                <rect key="frame" x="30" y="0.0" width="284" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -1251,7 +1251,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PWN-7r-JXF" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Caronas disponíveis" image="carItem" id="K1E-SF-tyJ"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3uI-A9-Y5s">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="3uI-A9-Y5s">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

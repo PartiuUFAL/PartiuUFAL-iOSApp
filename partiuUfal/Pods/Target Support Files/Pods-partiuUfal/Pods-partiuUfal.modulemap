@@ -1,0 +1,6 @@
+framework module Pods_partiuUfal {
+  umbrella header "Pods-partiuUfal-umbrella.h"
+
+  export *
+  module * { export * }
+}

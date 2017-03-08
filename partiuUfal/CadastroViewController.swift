@@ -6,6 +6,7 @@
 //  Copyright © 2017 Rubens Pessoa. All rights reserved.
 //
 
+import Firebase
 import UIKit
 
 class CadastroViewController: UIViewController {
@@ -56,9 +57,35 @@ class CadastroViewController: UIViewController {
         let email = emailTextField.text!
         let senha = senhaTextField.text!
         let telefone = telefoneTextField.text!
-        novoUsuario = Usuario(nome: nome, sobrenome: sobrenome, cpf: cpf, matricula: matricula, email: email, senha: senha, telefone: telefone)
+        novoUsuario = Usuario.init(nome, sobrenome, cpf, matricula, email, senha, telefone, self.carros)
         Sistema.usuarioAtual = novoUsuario
         //Enviar cadastro para o banco de dados
+        
+        let ref = FIRDatabase.database().reference()
+        
+        ref.child("users").child(email).observeSingleEvent(of: .value, with: { (snapshot) in
+            // Get user value
+            let value = snapshot.value as? NSDictionary
+            
+            if value == nil {
+        
+                var firebaseList: NSArray = NSArray()                
+
+                ref.child("users/\(email)/nome").setValue(nome)
+                ref.child("users/\(email)/sobrenome").setValue(sobrenome)
+                ref.child("users/\(email)/cpf").setValue(cpf)
+                ref.child("users/\(email)/matricula").setValue(matricula)
+                ref.child("users/\(email)/email").setValue(email)
+                ref.child("users/\(email)/senha").setValue(senha)
+                ref.child("users/\(email)/telefone").setValue(telefone)
+                //ref.child("users/\(["carros"])").setValue(firebaseList)
+           }
+            
+            }) { (error) in
+                print(error.localizedDescription)
+            }
+        
+        
     }
     
     override func viewDidLoad() {
