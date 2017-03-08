@@ -22,13 +22,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="firstScreen" translatesAutoresizingMaskIntoConstraints="NO" id="5NZ-iH-TNv">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="5NZ-iH-TNv" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" id="exC-c6-K77"/>
                             <constraint firstItem="5NZ-iH-TNv" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="iVR-2c-pUJ"/>
+                            <constraint firstItem="5NZ-iH-TNv" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="nf6-97-3NQ"/>
                             <constraint firstAttribute="trailing" secondItem="5NZ-iH-TNv" secondAttribute="trailing" id="qSF-nV-rXr"/>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="5NZ-iH-TNv" secondAttribute="bottom" id="yti-pV-dcD"/>
                         </constraints>

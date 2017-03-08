@@ -20,8 +20,8 @@ class Usuario {
     var telefone: String = ""
     
     init(
-        nome: String,sobrenome: String, cpf: String, matricula: String,
-        email: String, senha:String, telefone: String
+        _ nome: String, _ sobrenome: String, _ cpf: String, _ matricula: String,
+        _ email: String, _ senha:String, _ telefone: String, _ carros: [Carro]
         ) {
         self.nome = nome
         self.sobrenome = sobrenome
@@ -30,6 +30,7 @@ class Usuario {
         self.email = email
         self.senha = senha
         self.telefone = telefone
+        self.carros = carros
     }
     
     func addCar(car: Carro) {
