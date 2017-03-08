@@ -19,5 +19,14 @@ class Carro {
         self.placa = placa
         self.cor = cor
     }
-    
 }
+
+class CarroDAO {
+    static func getList() -> [Carro] {
+        return [
+            Carro(modelo: "GM Celta", placa:"NME-2601", cor: "Preto"),
+            Carro(modelo: "Nissan Match", placa: "Nehoir", cor: "Vermelho")
+        ]
+    }
+}
+
