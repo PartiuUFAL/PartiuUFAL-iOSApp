@@ -21,7 +21,7 @@ class Usuario {
     
     init(
         _ nome: String, _ sobrenome: String, _ cpf: String, _ matricula: String,
-        _ email: String, _ senha:String, _ telefone: String
+        _ email: String, _ senha:String, _ telefone: String, _ carros: [Carro]
         ) {
         self.nome = nome
         self.sobrenome = sobrenome
@@ -30,6 +30,7 @@ class Usuario {
         self.email = email
         self.senha = senha
         self.telefone = telefone
+        self.carros = carros
     }
     
     

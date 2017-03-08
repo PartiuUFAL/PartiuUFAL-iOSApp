@@ -54,14 +54,45 @@ class CadastroViewController: UIViewController {
         let sobrenome = sobrenomeTextField.text!
         let cpf = cpfTextField.text!
         let matricula = matriculaTextField.text!
-        let email = emailTextField.text!
+        let email = mailTextField.text!
         let senha = senhaTextField.text!
         let telefone = telefoneTextField.text!
-        novoUsuario = Usuario.init(nome, sobrenome, cpf, matricula, email, senha, telefone)
-        Sistema.usuarioAtual = novoUsuario
+        /ovoUsuario = Usuario.init(nome, sobrenome, cpf, matricula, email, senha, telefone, self.carros)
+        /istema.usuarioAtual = novoUsuario
         //Enviar cadastro para o banco de dados
         
         let ref = FIRDatabase.database().reference()
+        
+        ref.child("users").child(email).observeSingleEvent(of: .value, with: { (snapshot) in
+            // Get user value
+            let value = snapshot.value as? NSDictionary
+            
+            if value == nil {
+            /*  ref.child("users").child(email).setValue(["nome": nome])
+                ref.child("users").child(email).setValue(["sobrenome": sobrenome])
+                ref.child("users").child(email).setValue(["cpf": cpf])
+                ref.child("users").child(email).setValue(["matricula": matricula])
+                ref.child("users").child(email).setValue(["senha": senha])
+                ref.child("users").child(email).setValue(["email": email])
+                ref.child("users").child(email).setValue(["telefone": telefone])
+            */
+                
+                 
+                var firebaseList: NSArray = NSArray()                
+
+                ref.child("users/\(email)/nome").setValue(nome)
+                ref.child("users/\(email)/sobrenome").setValue(sobrenome)
+                ref.child("users/\(email)/cpf").setValue(cpf)
+                ref.child("users/\(email)/matricula").setValue(matricula)
+                ref.child("users/\(email)/email").setValue(email)
+                ref.child("users/\(email)/senha").setValue(senha)
+                ref.child("users/\(email)/telefone").setValue(telefone)
+                ref.child("users/\(["carros"])").setValue(firebaseList)
+           }
+            
+            }) { (error) in
+                print(error.localizedDescription)
+            }
         
         
     }

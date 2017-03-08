@@ -43,6 +43,7 @@ class LogInViewController: UIViewController {
                 let senha = value?["senha"] as! String
                 let matricula = value?["matricula"] as! String
                 let telefone = value?["telefone"] as! String
+                let carros = value?["carros"] as! [Carro]
                 
                 if(senha != pass){
                     /*
@@ -52,7 +53,7 @@ class LogInViewController: UIViewController {
                     return
                 }
                 
-                let user = Usuario.init(nome, sobrenome, cpf, matricula, email, senha, telefone)
+                let user = Usuario.init(nome, sobrenome, cpf, matricula, email, senha, telefone, carros)
                 
                 //print(cpf)
                 /*
