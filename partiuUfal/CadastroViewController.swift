@@ -26,16 +26,19 @@ class CadastroViewController: UIViewController {
     @IBOutlet weak var corTextField: UITextField!
     
     @IBOutlet weak var switchModoMotorista: UISwitch!
-    
+
     @IBOutlet weak var statusModoMotorista: UILabel!
-    
+
     @IBAction func switchModoMotorista(_ sender: Any) {
+        
         motoristaStackView.isHidden = !modoMotoristaSwitch.isOn
+        
         if modoMotoristaSwitch.isOn {
             statusModoMotorista.text = "Ativado"
         } else {
             statusModoMotorista.text = "Desativado"
         }
+        
     }
     
     @IBAction func addCarro(_ sender: Any) {

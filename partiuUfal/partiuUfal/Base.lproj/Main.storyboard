@@ -158,6 +158,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="login:" destination="iuK-Qw-aWc" eventType="touchUpInside" id="Qhg-IO-SvK"/>
                                     <segue destination="3PX-sa-cGx" kind="showDetail" id="jeK-oi-Yrs"/>
                                 </connections>
                             </button>
@@ -228,7 +229,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="83"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ad3-OU-5Gn" id="9El-pR-cqv">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="82"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="83"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="bWL-7y-E3O" userLabel="CaronaCell Stack View">
@@ -495,7 +496,7 @@
                                         <rect key="frame" x="0.0" y="28" width="343" height="126"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yZE-to-SWS" id="kg6-t3-cZa">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="125"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="126"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="3O0-6t-GhH">
@@ -758,7 +759,7 @@
         <!--Cadastre-se View Controller-->
         <scene sceneID="Nx6-kg-R5b">
             <objects>
-                <viewController title="Cadastre-se View Controller" id="dxZ-4i-Uep" sceneMemberID="viewController">
+                <viewController title="Cadastre-se View Controller" id="dxZ-4i-Uep" customClass="CadastroViewController" customModule="partiuUfal" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Apb-la-gaX"/>
                         <viewControllerLayoutGuide type="bottom" id="h1B-Tk-yiO"/>
@@ -837,14 +838,17 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ativado" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kY6-c1-FRP">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Ativado" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kY6-c1-FRP">
                                                         <rect key="frame" x="228.5" y="0.0" width="57.5" height="30"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" onImage="I" translatesAutoresizingMaskIntoConstraints="NO" id="avB-WX-chE">
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" onImage="I" translatesAutoresizingMaskIntoConstraints="NO" id="avB-WX-chE">
                                                         <rect key="frame" x="294" y="0.0" width="51" height="30"/>
+                                                        <connections>
+                                                            <action selector="switchModoMotorista:" destination="dxZ-4i-Uep" eventType="valueChanged" id="FF8-Eu-CMF"/>
+                                                        </connections>
                                                     </switch>
                                                 </subviews>
                                                 <constraints>
@@ -856,26 +860,37 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Hzm-4Y-8gE" userLabel="Motorista Stack View">
-                                <rect key="frame" x="16" y="444" width="343" height="99"/>
+                                <rect key="frame" x="16" y="444" width="343" height="144"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Modelo e Marca do Veículo" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y3g-uG-mKc">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="27.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Placa" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MgU-Kl-qAR">
-                                        <rect key="frame" x="0.0" y="35.5" width="343" height="28"/>
+                                        <rect key="frame" x="0.0" y="38" width="343" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Cor" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D8w-ZF-BGE">
-                                        <rect key="frame" x="0.0" y="71.5" width="343" height="27.5"/>
+                                        <rect key="frame" x="0.0" y="76" width="343" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PrQ-kH-wpa">
+                                        <rect key="frame" x="0.0" y="114" width="343" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="ohV-yk-kpK"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" title="Adicionar carro"/>
+                                        <connections>
+                                            <action selector="addCarro:" destination="dxZ-4i-Uep" eventType="touchUpInside" id="z67-EG-Tl1"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TfH-DO-2N5">
@@ -889,19 +904,9 @@
                                     <segue destination="A50-sV-vUA" kind="show" id="fFn-dv-G1T"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PrQ-kH-wpa">
-                                <rect key="frame" x="16" y="567" width="343" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="ohV-yk-kpK"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="Adicionar carro"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="PrQ-kH-wpa" firstAttribute="leading" secondItem="lr1-4m-4Fm" secondAttribute="leadingMargin" id="1P4-O0-mZS"/>
-                            <constraint firstItem="TfH-DO-2N5" firstAttribute="top" secondItem="PrQ-kH-wpa" secondAttribute="bottom" constant="24" id="7YS-pg-dN3"/>
                             <constraint firstItem="5fi-VB-Iwm" firstAttribute="top" secondItem="eYi-uC-h6Q" secondAttribute="bottom" constant="24" id="9Rk-Xf-bYd"/>
                             <constraint firstItem="eYi-uC-h6Q" firstAttribute="top" secondItem="lr1-4m-4Fm" secondAttribute="top" constant="68" id="Aww-D6-8wh"/>
                             <constraint firstItem="0yG-in-eeY" firstAttribute="leading" secondItem="lr1-4m-4Fm" secondAttribute="leading" id="Eae-aZ-LTP"/>
@@ -916,9 +921,7 @@
                             <constraint firstAttribute="trailing" secondItem="0yG-in-eeY" secondAttribute="trailing" id="kbq-fD-hJB"/>
                             <constraint firstItem="TfH-DO-2N5" firstAttribute="leading" secondItem="lr1-4m-4Fm" secondAttribute="leadingMargin" constant="24" id="koS-C8-fTv"/>
                             <constraint firstItem="5fi-VB-Iwm" firstAttribute="leading" secondItem="lr1-4m-4Fm" secondAttribute="leadingMargin" id="nYK-WV-jj9"/>
-                            <constraint firstItem="PrQ-kH-wpa" firstAttribute="top" secondItem="Hzm-4Y-8gE" secondAttribute="bottom" constant="24" id="p9b-tB-PXk"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Hzm-4Y-8gE" secondAttribute="trailing" id="rMI-bh-UNO"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="PrQ-kH-wpa" secondAttribute="trailing" id="ter-5g-1Mr"/>
                             <constraint firstItem="0yG-in-eeY" firstAttribute="top" secondItem="Apb-la-gaX" secondAttribute="bottom" id="vXS-7b-AGB"/>
                         </constraints>
                     </view>
@@ -935,6 +938,8 @@
                         <outlet property="placaTextField" destination="MgU-Kl-qAR" id="pj8-lX-cyP"/>
                         <outlet property="senhaTextField" destination="fAF-3i-TID" id="aHj-Sn-fPB"/>
                         <outlet property="sobrenomeTextField" destination="GVq-cx-pTT" id="4Ip-2c-7F6"/>
+                        <outlet property="statusModoMotorista" destination="kY6-c1-FRP" id="ovh-17-pIa"/>
+                        <outlet property="switchModoMotorista" destination="avB-WX-chE" id="EKZ-G6-A9N"/>
                         <outlet property="telefoneTextField" destination="qU7-rs-iBe" id="Y8Z-8k-rcL"/>
                     </connections>
                 </viewController>

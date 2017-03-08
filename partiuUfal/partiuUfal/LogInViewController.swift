@@ -17,7 +17,8 @@ class LogInViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    @IBAction func login() {
+    
+    @IBAction func login(_ sender: Any) {
         var email = emailTextField.text
         var senha = senhaTextField.text
         //Validar com o banco de Dados
