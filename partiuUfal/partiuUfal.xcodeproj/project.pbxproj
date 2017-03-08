@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+
+		3F0609E61E7084FA00E2F09E /* EditarCadastroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0609E51E7084FA00E2F09E /* EditarCadastroViewController.swift */; };
+		3F0609E81E7087D600E2F09E /* CarroTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0609E71E7087D600E2F09E /* CarroTableViewCell.swift */; };
+		3F0609EA1E70969500E2F09E /* OferecerCaronaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0609E91E70969500E2F09E /* OferecerCaronaViewController.swift */; };
 		3F4B65961E70876B00314392 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F4B65951E70876B00314392 /* GoogleService-Info.plist */; };
 		3F52E1331E6F30C300A6844E /* Carro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F52E1321E6F30C300A6844E /* Carro.swift */; };
 		3F52E1351E6F317100A6844E /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F52E1341E6F317100A6844E /* Usuario.swift */; };
@@ -24,6 +28,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+
+		3F0609E51E7084FA00E2F09E /* EditarCadastroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditarCadastroViewController.swift; sourceTree = "<group>"; };
+		3F0609E71E7087D600E2F09E /* CarroTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarroTableViewCell.swift; sourceTree = "<group>"; };
+		3F0609E91E70969500E2F09E /* OferecerCaronaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OferecerCaronaViewController.swift; sourceTree = "<group>"; };
 		3F4B65951E70876B00314392 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3F52E1321E6F30C300A6844E /* Carro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Carro.swift; sourceTree = "<group>"; };
 		3F52E1341E6F317100A6844E /* Usuario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Usuario.swift; path = ../Usuario.swift; sourceTree = "<group>"; };
@@ -61,6 +69,7 @@
 			children = (
 				3F52E1321E6F30C300A6844E /* Carro.swift */,
 				3F52E1341E6F317100A6844E /* Usuario.swift */,
+				3F0609E91E70969500E2F09E /* OferecerCaronaViewController.swift */,
 				3F52E1361E6F331E00A6844E /* Carona.swift */,
 			);
 			name = Model;
@@ -69,6 +78,8 @@
 		3F52E13B1E6F36A800A6844E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				3F0609E71E7087D600E2F09E /* CarroTableViewCell.swift */,
+				3F0609E51E7084FA00E2F09E /* EditarCadastroViewController.swift */,
 				EA82CD801E6CFC2000C794E9 /* InitialPageViewController.swift */,
 				CF9A50851E6F37FC009EE1E6 /* MinhasCaronasTableViewController.swift */,
 				3F52E13F1E6F4A8200A6844E /* Sistema.swift */,
@@ -274,10 +285,13 @@
 				3F52E1391E6F364700A6844E /* LogInViewController.swift in Sources */,
 				EA1433981E6A03AA00578F36 /* AppDelegate.swift in Sources */,
 				3F52E1351E6F317100A6844E /* Usuario.swift in Sources */,
+				3F0609E81E7087D600E2F09E /* CarroTableViewCell.swift in Sources */,
 				EA82CD811E6CFC2000C794E9 /* InitialPageViewController.swift in Sources */,
+				3F0609E61E7084FA00E2F09E /* EditarCadastroViewController.swift in Sources */,
 				CF9A50861E6F37FC009EE1E6 /* MinhasCaronasTableViewController.swift in Sources */,
 				3F52E1401E6F4A8200A6844E /* Sistema.swift in Sources */,
 				3F52E13E1E6F397600A6844E /* CadastroViewController.swift in Sources */,
+				3F0609EA1E70969500E2F09E /* OferecerCaronaViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

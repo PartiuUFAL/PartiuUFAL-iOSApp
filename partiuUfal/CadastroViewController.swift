@@ -47,6 +47,9 @@ class CadastroViewController: UIViewController {
         let placa = placaTextField.text!
         let cor = corTextField.text!
         carros.append(Carro(modelo: modelo, placa: placa, cor: cor))
+        modeloTextField.text = ""
+        placaTextField.text = ""
+        corTextField.text = ""
     }
 
     @IBAction func concluirCadastro() {
@@ -57,7 +60,9 @@ class CadastroViewController: UIViewController {
         let email = emailTextField.text!
         let senha = senhaTextField.text!
         let telefone = telefoneTextField.text!
-        novoUsuario = Usuario.init(nome, sobrenome, cpf, matricula, email, senha, telefone, self.carros)
+
+        novoUsuario = Usuario(nome: nome, sobrenome: sobrenome, cpf: cpf, matricula: matricula, email: email, senha: senha, telefone: telefone)
+        novoUsuario?.carros = carros
         Sistema.usuarioAtual = novoUsuario
         //Enviar cadastro para o banco de dados
         
