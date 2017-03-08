@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class LogInViewController: UIViewController {
 
@@ -19,9 +20,74 @@ class LogInViewController: UIViewController {
     }
     
     @IBAction func login(_ sender: Any) {
-        var email = emailTextField.text
-        var senha = senhaTextField.text
+        let email = emailTextField.text!
+        
+        print(email)
+        let pass = senhaTextField.text!
+        print(pass)
         //Validar com o banco de Dados
+        
+       
+        let ref = FIRDatabase.database().reference()
+        
+        
+        ref.child(email).observeSingleEvent(of: .value, with: { (snapshot) in
+            // Get user value
+            let value = snapshot.value as? NSDictionary
+            
+            if value != nil {
+                let email = value?["email"] as! String
+                let cpf = value?["cpf"] as! String
+                let nome = value?["nome"] as! String
+                let sobrenome = value?["sobrenome"] as! String
+                let senha = value?["senha"] as! String
+                let matricula = value?["matricula"] as! String
+                let telefone = value?["telefone"] as! String
+                
+                if(senha != pass){
+                    /*
+                     Notificar que esta diferente
+                    */
+                    
+                    return
+                }
+                
+                let user = Usuario.init(nome, sobrenome, cpf, matricula, email, senha, telefone)
+                
+                //print(cpf)
+                /*
+                 Passar dados pro banco local
+                 */
+
+            } else {
+                print("nil")
+                /*
+                    Exibir msg de dados errados
+                 */
+            }
+           
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+       /*
+        
+        //let userID = FIRAuth.auth()?.currentUser?.uid
+        ref.child("users").child(email).observeSingleEvent(of: .value, with: { (snapshot) in
+            // Get user value
+            
+            
+            let value = snapshot.value as? NSDictionary
+            
+            print(value)
+            
+                      // ...
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+        
+        
+        ref.child("users/(user.uid)/username").setValue(email)
+ */
     }
 
     override func didReceiveMemoryWarning() {

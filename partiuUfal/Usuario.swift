@@ -20,8 +20,8 @@ class Usuario {
     var telefone: String = ""
     
     init(
-        nome: String,sobrenome: String, cpf: String, matricula: String,
-        email: String, senha:String, telefone: String
+        _ nome: String, _ sobrenome: String, _ cpf: String, _ matricula: String,
+        _ email: String, _ senha:String, _ telefone: String
         ) {
         self.nome = nome
         self.sobrenome = sobrenome
