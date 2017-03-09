@@ -9,7 +9,7 @@
 import UIKit
 import FirebaseDatabase
 
-class LogInViewController: UIViewController {
+class LogInViewController: TouchesViewController {
 
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var senhaTextField: UITextField!

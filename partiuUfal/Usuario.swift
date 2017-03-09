@@ -11,6 +11,7 @@ import Foundation
 class Usuario {
     
     var carros: [Carro] = []
+    var caronas: [Carona] = []
     var nome: String = ""
     var sobrenome: String = ""
     var cpf: String = ""
@@ -31,6 +32,10 @@ class Usuario {
     
     func addCar(car: Carro) {
         self.carros.append(car)
+    }
+    
+    func addCarona(carona: Carona) {
+        self.caronas.append(carona)
     }
 }
 

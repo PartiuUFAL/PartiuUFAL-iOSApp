@@ -8,7 +8,7 @@
 
 import UIKit
 
-class OferecerCaronaViewController: UIViewController {
+class OferecerCaronaViewController: TouchesViewController {
 
     @IBOutlet weak var indoSegmentedControl: UISegmentedControl!
     @IBOutlet weak var saidaTextField: UITextField!
@@ -46,10 +46,14 @@ class OferecerCaronaViewController: UIViewController {
         let usuarioAtual = Sistema.usuarioAtual!
         let voltando = (indoSegmentedControl.selectedSegmentIndex == 0)
         let carona = Carona(motorista: usuarioAtual, voltando: voltando, saida: saida, chegada: chegada, descricao: descricao, via: via, vagas: vagas)
+        usuarioAtual.addCarona(carona: carona)
         //Enviar para o firebase a carona
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        if(Sistema.usuarioAtual == nil) {
+            Sistema.usuarioAtual = CaronaDAO.getList()[0].motorista
+        }
         descricaoTextView.layer.borderWidth = 0.7
         descricaoTextView.layer.borderColor = UIColor.init(colorLiteralRed: 0.90, green: 0.90, blue: 0.90, alpha: 1).cgColor
         descricaoTextView.layer.cornerRadius = 6

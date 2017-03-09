@@ -9,7 +9,7 @@
 import Firebase
 import UIKit
 
-class CadastroViewController: UIViewController {
+class CadastroViewController: TouchesViewController {
 
     var novoUsuario: Usuario?
     var carros: [Carro] = []
@@ -109,7 +109,7 @@ class CadastroViewController: UIViewController {
         }
         // Do any additional setup after loading the view.
     }
-
+   
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -127,3 +127,4 @@ class CadastroViewController: UIViewController {
     */
 
 }
+
