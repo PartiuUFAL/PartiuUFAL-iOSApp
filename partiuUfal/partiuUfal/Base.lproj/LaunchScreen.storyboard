@@ -27,8 +27,8 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="5NZ-iH-TNv" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="eIQ-Ha-bbR"/>
                             <constraint firstItem="5NZ-iH-TNv" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="iVR-2c-pUJ"/>
-                            <constraint firstItem="5NZ-iH-TNv" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="nf6-97-3NQ"/>
                             <constraint firstAttribute="trailing" secondItem="5NZ-iH-TNv" secondAttribute="trailing" id="qSF-nV-rXr"/>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="5NZ-iH-TNv" secondAttribute="bottom" id="yti-pV-dcD"/>
                         </constraints>
