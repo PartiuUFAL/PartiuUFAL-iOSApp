@@ -19,10 +19,7 @@ class Usuario {
     var senha: String = ""
     var telefone: String = ""
     
-    init(
-        _ nome: String, _ sobrenome: String, _ cpf: String, _ matricula: String,
-        _ email: String, _ senha:String, _ telefone: String, _ carros: [Carro]
-        ) {
+    init(nome: String, sobrenome: String, cpf: String, matricula: String, email: String, senha:String, telefone: String) {
         self.nome = nome
         self.sobrenome = sobrenome
         self.cpf = cpf
@@ -30,7 +27,6 @@ class Usuario {
         self.email = email
         self.senha = senha
         self.telefone = telefone
-        self.carros = carros
     }
     
     func addCar(car: Carro) {
@@ -43,6 +39,7 @@ class UsuarioDAO {
     static func getList() -> [Usuario] {
         
         var carrosCriados: [Carro] = CarroDAO.getList()
+        
         var user1: Usuario = Usuario(nome: "Crodoaldo", sobrenome: "da Silva", cpf: "02934839822039", matricula: "23", email: "sdjwpe@ohsfoiw.cow", senha: "109230293", telefone: "99999-9999")
         
         var user2: Usuario = Usuario(nome: "Abigobaldo", sobrenome: "da Cunha", cpf: "02934839822038", matricula: "24", email: "sdjwpf@ohsfoiw.cow", senha: "109230294", telefone: "99999-9990")

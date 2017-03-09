@@ -20,6 +20,7 @@ class LogInViewController: UIViewController {
     }
     
     @IBAction func login(_ sender: Any) {
+        /*
         let email = emailTextField.text!
         
         print(email)
@@ -43,7 +44,7 @@ class LogInViewController: UIViewController {
                 let senha = value?["senha"] as! String
                 let matricula = value?["matricula"] as! String
                 let telefone = value?["telefone"] as! String
-                let carros = value?["carros"] as! [Carro]
+                // let carros = value?["carros"] as! [Carro]
                 
                 if(senha != pass){
                     /*
@@ -53,7 +54,7 @@ class LogInViewController: UIViewController {
                     return
                 }
                 
-                let user = Usuario.init(nome, sobrenome, cpf, matricula, email, senha, telefone, carros)
+                let user = Usuario.init(nome: nome, sobrenome:sobrenome, cpf: cpf, matricula: matricula, email: email, senha: senha, telefone: telefone)
                 
                 //print(cpf)
                 /*
@@ -69,7 +70,8 @@ class LogInViewController: UIViewController {
            
         }) { (error) in
             print(error.localizedDescription)
-        }
+        } */
+        
        /*
         
         //let userID = FIRAuth.auth()?.currentUser?.uid
