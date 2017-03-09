@@ -26,6 +26,7 @@
 		EA14339D1E6A03AA00578F36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA14339B1E6A03AA00578F36 /* Main.storyboard */; };
 		EA14339F1E6A03AA00578F36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA14339E1E6A03AA00578F36 /* Assets.xcassets */; };
 		EA1433A21E6A03AA00578F36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA1433A01E6A03AA00578F36 /* LaunchScreen.storyboard */; };
+		EA78A1111E71F7A000F83224 /* TouchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA78A1101E71F7A000F83224 /* TouchesViewController.swift */; };
 		EA82CD811E6CFC2000C794E9 /* InitialPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA82CD801E6CFC2000C794E9 /* InitialPageViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,7 @@
 		EA14339E1E6A03AA00578F36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA1433A11E6A03AA00578F36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA1433A31E6A03AA00578F36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA78A1101E71F7A000F83224 /* TouchesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TouchesViewController.swift; path = ../TouchesViewController.swift; sourceTree = "<group>"; };
 		EA82CD801E6CFC2000C794E9 /* InitialPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialPageViewController.swift; sourceTree = "<group>"; };
 		EBCCC76C70DBB9E4DBA26745 /* Pods_partiuUfal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_partiuUfal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F70D812C9A2586E6B3954FFA /* Pods-partiuUfal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-partiuUfal.release.xcconfig"; path = "Pods/Target Support Files/Pods-partiuUfal/Pods-partiuUfal.release.xcconfig"; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 		3F52E13B1E6F36A800A6844E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				EA78A1101E71F7A000F83224 /* TouchesViewController.swift */,
 				3F0609E71E7087D600E2F09E /* CarroTableViewCell.swift */,
 				3F0609E51E7084FA00E2F09E /* EditarCadastroViewController.swift */,
 				EA82CD801E6CFC2000C794E9 /* InitialPageViewController.swift */,
@@ -287,6 +290,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA78A1111E71F7A000F83224 /* TouchesViewController.swift in Sources */,
 				3F52E1371E6F331E00A6844E /* Carona.swift in Sources */,
 				3F52E1331E6F30C300A6844E /* Carro.swift in Sources */,
 				3F52E1391E6F364700A6844E /* LogInViewController.swift in Sources */,

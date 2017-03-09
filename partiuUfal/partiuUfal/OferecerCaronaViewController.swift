@@ -8,7 +8,7 @@
 
 import UIKit
 
-class OferecerCaronaViewController: UIViewController {
+class OferecerCaronaViewController: TouchesViewController {
 
     @IBOutlet weak var indoSegmentedControl: UISegmentedControl!
     @IBOutlet weak var saidaTextField: UITextField!
