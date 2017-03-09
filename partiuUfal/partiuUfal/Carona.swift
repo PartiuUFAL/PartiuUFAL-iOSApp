@@ -42,12 +42,13 @@ class CaronaDAO {
     static func getList() -> [Carona] {
         let listUsers: [Usuario] = UsuarioDAO.getList()
             
-        let carona1: Carona = Carona(motorista: listUsers[0], voltando: true, saida: "Ponta Verde", chegada: "Ponta Verde", descricao: "Carona paga. Valor: 2 reais", via: "Via Expressa", vagas: 4)
+        let carona1: Carona = Carona(motorista: listUsers[0], voltando: false, saida: "Jatiuca", chegada: "UFAL", descricao: "Carona paga. Valor: 2 reais", via: "Via Expressa", vagas: 4)
             
-        let carona2: Carona = Carona(motorista: listUsers[1], voltando: true, saida: "Ponta Verde", chegada: "Ponta Verde", descricao: "Carona paga. Valor: 2 reais", via: "Via Expressa", vagas: 2)
+        let carona2: Carona = Carona(motorista: listUsers[1], voltando: true, saida: "UFAL", chegada: "Ponta Verde", descricao: "Carona paga. Valor: 2 reais", via: "Via Expressa", vagas: 2)
             
         carona2.addPassageiro(passageiro: listUsers[0])
-            
+        carona1.motorista.addCarona(carona: carona1)
+        carona2.motorista.addCarona(carona: carona2)
         return [carona1, carona2]
     }
 }
