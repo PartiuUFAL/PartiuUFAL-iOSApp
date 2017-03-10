@@ -27,6 +27,8 @@
 		EA14339F1E6A03AA00578F36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA14339E1E6A03AA00578F36 /* Assets.xcassets */; };
 		EA1433A21E6A03AA00578F36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA1433A01E6A03AA00578F36 /* LaunchScreen.storyboard */; };
 		EA78A1111E71F7A000F83224 /* TouchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA78A1101E71F7A000F83224 /* TouchesViewController.swift */; };
+		EA7B5C491E721EBD006302CD /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7B5C481E721EBD006302CD /* Data.swift */; };
+		EA7B5C4B1E721F1C006302CD /* Hora.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7B5C4A1E721F1C006302CD /* Hora.swift */; };
 		EA82CD811E6CFC2000C794E9 /* InitialPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA82CD801E6CFC2000C794E9 /* InitialPageViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +55,8 @@
 		EA1433A11E6A03AA00578F36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA1433A31E6A03AA00578F36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA78A1101E71F7A000F83224 /* TouchesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TouchesViewController.swift; path = ../TouchesViewController.swift; sourceTree = "<group>"; };
+		EA7B5C481E721EBD006302CD /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		EA7B5C4A1E721F1C006302CD /* Hora.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hora.swift; sourceTree = "<group>"; };
 		EA82CD801E6CFC2000C794E9 /* InitialPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialPageViewController.swift; sourceTree = "<group>"; };
 		EBCCC76C70DBB9E4DBA26745 /* Pods_partiuUfal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_partiuUfal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F70D812C9A2586E6B3954FFA /* Pods-partiuUfal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-partiuUfal.release.xcconfig"; path = "Pods/Target Support Files/Pods-partiuUfal/Pods-partiuUfal.release.xcconfig"; sourceTree = "<group>"; };
@@ -73,10 +77,12 @@
 		3F52E13A1E6F369600A6844E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EA7B5C481E721EBD006302CD /* Data.swift */,
+				EA7B5C4A1E721F1C006302CD /* Hora.swift */,
 				3F52E1321E6F30C300A6844E /* Carro.swift */,
 				3F52E1341E6F317100A6844E /* Usuario.swift */,
-				3F0609E91E70969500E2F09E /* OferecerCaronaViewController.swift */,
 				3F52E1361E6F331E00A6844E /* Carona.swift */,
+				3F52E13F1E6F4A8200A6844E /* Sistema.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -84,12 +90,15 @@
 		3F52E13B1E6F36A800A6844E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				3F4FECF21E71D6B90093CA09 /* CaronaDetalhesViewController.swift */,
+				3F4FECEA1E71CAEF0093CA09 /* CaronasDisponiveisTableViewController.swift */,
+				3F4FECEC1E71CD230093CA09 /* CaronasDisponiveisTableViewCell.swift */,
+				3F0609E91E70969500E2F09E /* OferecerCaronaViewController.swift */,
 				EA78A1101E71F7A000F83224 /* TouchesViewController.swift */,
 				3F0609E71E7087D600E2F09E /* CarroTableViewCell.swift */,
 				3F0609E51E7084FA00E2F09E /* EditarCadastroViewController.swift */,
 				EA82CD801E6CFC2000C794E9 /* InitialPageViewController.swift */,
 				CF9A50851E6F37FC009EE1E6 /* MinhasCaronasTableViewController.swift */,
-				3F52E13F1E6F4A8200A6844E /* Sistema.swift */,
 				3F52E13D1E6F397600A6844E /* CadastroViewController.swift */,
 				3F52E1381E6F364700A6844E /* LogInViewController.swift */,
 			);
@@ -144,9 +153,6 @@
 				3F52E13A1E6F369600A6844E /* Model */,
 				EA5954111E6B2FDF0066A6FA /* Supporting Files */,
 				EA14339B1E6A03AA00578F36 /* Main.storyboard */,
-				3F4FECF21E71D6B90093CA09 /* CaronaDetalhesViewController.swift */,
-				3F4FECEA1E71CAEF0093CA09 /* CaronasDisponiveisTableViewController.swift */,
-				3F4FECEC1E71CD230093CA09 /* CaronasDisponiveisTableViewCell.swift */,
 				3F4B65951E70876B00314392 /* GoogleService-Info.plist */,
 				3F52E13B1E6F36A800A6844E /* Controller */,
 				3F52E13C1E6F36B100A6844E /* View */,
@@ -303,7 +309,9 @@
 				3F0609E61E7084FA00E2F09E /* EditarCadastroViewController.swift in Sources */,
 				CF9A50861E6F37FC009EE1E6 /* MinhasCaronasTableViewController.swift in Sources */,
 				3F52E1401E6F4A8200A6844E /* Sistema.swift in Sources */,
+				EA7B5C491E721EBD006302CD /* Data.swift in Sources */,
 				3F4FECF31E71D6B90093CA09 /* CaronaDetalhesViewController.swift in Sources */,
+				EA7B5C4B1E721F1C006302CD /* Hora.swift in Sources */,
 				3F52E13E1E6F397600A6844E /* CadastroViewController.swift in Sources */,
 				3F0609EA1E70969500E2F09E /* OferecerCaronaViewController.swift in Sources */,
 			);

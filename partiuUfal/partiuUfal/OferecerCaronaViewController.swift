@@ -17,6 +17,16 @@ class OferecerCaronaViewController: TouchesViewController {
     @IBOutlet weak var descricaoTextView: UITextView!
     @IBOutlet weak var vagasLabel: UILabel!
     @IBOutlet weak var vagasSlider: UISlider!
+    @IBOutlet weak var diaInicioTextField: UITextField!
+    @IBOutlet weak var mesInicioTextField: UITextField!
+    @IBOutlet weak var anoInicioTextField: UITextField!
+    @IBOutlet weak var mesTerminoTextField: UITextField!
+    @IBOutlet weak var diaTerminoTextField: UITextField!
+    @IBOutlet weak var anoTerminoTextField: UITextField!
+    @IBOutlet weak var horaInicioTextField: UITextField!
+    @IBOutlet weak var minutoInicioTextField: UITextField!
+    @IBOutlet weak var horaTerminoTextField: UITextField!
+    @IBOutlet weak var minutoTerminoTextField: UITextField!
     @IBAction func trocarDirecao() {
         if(indoSegmentedControl.selectedSegmentIndex == 0) {
             chegadaTextField.text = "UFAL"
@@ -45,15 +55,42 @@ class OferecerCaronaViewController: TouchesViewController {
         let vagas = Int(vagasSlider.value)
         let usuarioAtual = Sistema.usuarioAtual!
         let voltando = (indoSegmentedControl.selectedSegmentIndex == 0)
-        let carona = Carona(motorista: usuarioAtual, voltando: voltando, saida: saida, chegada: chegada, descricao: descricao, via: via, vagas: vagas)
+        let dataInicio = Data(
+            dia: Int(diaInicioTextField.text!)!,
+            mes: Int(mesInicioTextField.text!)!,
+            ano: Int(anoInicioTextField.text!)!
+        )
+        let dataTermino = Data(
+            dia: Int(diaTerminoTextField.text!)!,
+            mes: Int(mesTerminoTextField.text!)!,
+            ano: Int(anoTerminoTextField.text!)!
+        )
+        let horaInicio = Hora (
+            hora: Int(horaInicioTextField.text!)!,
+            min: Int(minutoInicioTextField.text!)!
+        )
+        let horaTermino = Hora (
+            hora: Int(horaTerminoTextField.text!)!,
+            min: Int(minutoTerminoTextField.text!)!
+        )
+        let carona = Carona(motorista: usuarioAtual, voltando: voltando, saida: saida, chegada: chegada, descricao: descricao, via: via, vagas: vagas, dataInicio: dataInicio, dataFim: dataTermino, inicio: horaInicio, fim: horaTermino)
+        
+        diaInicioTextField.text = ""
+        mesInicioTextField.text = ""
+        anoInicioTextField.text = ""
+        mesTerminoTextField.text = ""
+        diaTerminoTextField.text = ""
+        anoTerminoTextField.text = ""
+        horaInicioTextField.text = ""
+        minutoInicioTextField.text = ""
+        horaTerminoTextField.text = ""
+        minutoTerminoTextField.text = ""
+        
         usuarioAtual.addCarona(carona: carona)
-        //Enviar para o firebase a carona
+        Sistema.caronas.append(carona)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        if(Sistema.usuarioAtual == nil) {
-            Sistema.usuarioAtual = CaronaDAO.getList()[0].motorista
-        }
         descricaoTextView.layer.borderWidth = 0.7
         descricaoTextView.layer.borderColor = UIColor.init(colorLiteralRed: 0.90, green: 0.90, blue: 0.90, alpha: 1).cgColor
         descricaoTextView.layer.cornerRadius = 6
@@ -64,18 +101,5 @@ class OferecerCaronaViewController: TouchesViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

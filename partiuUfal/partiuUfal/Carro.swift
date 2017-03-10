@@ -10,11 +10,13 @@ import Foundation
 
 class Carro {
     
+    var id: UInt32 = 0
     var modelo: String
     var placa: String
     var cor: String
     
     init(modelo: String, placa: String, cor: String) {
+        self.id = arc4random();
         self.modelo = modelo
         self.placa = placa
         self.cor = cor
