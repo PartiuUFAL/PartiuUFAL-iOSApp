@@ -31,15 +31,12 @@ class CadastroViewController: TouchesViewController {
     @IBOutlet weak var statusModoMotorista: UILabel!
 
     @IBAction func switchModoMotorista(_ sender: Any) {
-        
         motoristaStackView.isHidden = !modoMotoristaSwitch.isOn
-        
         if modoMotoristaSwitch.isOn {
             statusModoMotorista.text = "Ativado"
         } else {
             statusModoMotorista.text = "Desativado"
         }
-        
     }
     
     @IBAction func addCarro(_ sender: Any) {
@@ -64,33 +61,7 @@ class CadastroViewController: TouchesViewController {
         novoUsuario = Usuario(nome: nome, sobrenome: sobrenome, cpf: cpf, matricula: matricula, email: email, senha: senha, telefone: telefone)
         novoUsuario?.carros = carros
         Sistema.usuarioAtual = novoUsuario
-        //Enviar cadastro para o banco de dados
-        
-        let ref = FIRDatabase.database().reference()
-        
-        ref.child("users").child(email).observeSingleEvent(of: .value, with: { (snapshot) in
-            // Get user value
-            let value = snapshot.value as? NSDictionary
-            
-            if value == nil {
-        
-                var firebaseList: NSArray = NSArray()                
-
-                ref.child("users/\(email)/nome").setValue(nome)
-                ref.child("users/\(email)/sobrenome").setValue(sobrenome)
-                ref.child("users/\(email)/cpf").setValue(cpf)
-                ref.child("users/\(email)/matricula").setValue(matricula)
-                ref.child("users/\(email)/email").setValue(email)
-                ref.child("users/\(email)/senha").setValue(senha)
-                ref.child("users/\(email)/telefone").setValue(telefone)
-                //ref.child("users/\(["carros"])").setValue(firebaseList)
-           }
-            
-            }) { (error) in
-                print(error.localizedDescription)
-            }
-        
-        
+        Sistema.usuarios.append(novoUsuario!)
     }
     
     override func viewDidLoad() {
@@ -107,24 +78,10 @@ class CadastroViewController: TouchesViewController {
             modoMotoristaSwitch.isOn = (auxUsuario.carros.count > 0)
             telefoneTextField.text = auxUsuario.telefone
         }
-        // Do any additional setup after loading the view.
     }
    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
