@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PULoginViewController" customModule="_PartiuUfal" customModuleProvider="target">
+            <connections>
+                <outlet property="facebookLogin" destination="mju-HK-h3C" id="50m-2y-ErB"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ikM-mg-dpj">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundLogin" translatesAutoresizingMaskIntoConstraints="NO" id="zO5-0g-rLA">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mju-HK-h3C">
+                            <rect key="frame" x="87" y="549" width="200" height="30"/>
+                            <color key="backgroundColor" red="0.29019607843137252" green="0.56470588235294117" blue="0.88627450980392153" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="usP-E5-Ehz"/>
+                                <constraint firstAttribute="width" constant="200" id="x81-cr-mCv"/>
+                            </constraints>
+                            <state key="normal" title="Entrar com Facebook">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="btFacebookLoginTapped:" destination="-1" eventType="touchUpInside" id="8nE-cg-bDC"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="zO5-0g-rLA" firstAttribute="leading" secondItem="ikM-mg-dpj" secondAttribute="leading" id="4Je-ZR-rh1"/>
+                        <constraint firstAttribute="bottom" secondItem="zO5-0g-rLA" secondAttribute="bottom" id="CXv-6F-h8E"/>
+                        <constraint firstAttribute="trailing" secondItem="zO5-0g-rLA" secondAttribute="trailing" id="Gz0-aU-vyl"/>
+                        <constraint firstItem="mju-HK-h3C" firstAttribute="centerY" secondItem="ikM-mg-dpj" secondAttribute="centerY" constant="230.5" id="K5J-lU-V94"/>
+                        <constraint firstItem="mju-HK-h3C" firstAttribute="centerX" secondItem="ikM-mg-dpj" secondAttribute="centerX" id="LCT-E0-Jjy"/>
+                        <constraint firstItem="zO5-0g-rLA" firstAttribute="top" secondItem="ikM-mg-dpj" secondAttribute="top" id="b2j-RY-O8K"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="ikM-mg-dpj" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="IjM-V1-Yci"/>
+                <constraint firstAttribute="bottom" secondItem="ikM-mg-dpj" secondAttribute="bottom" id="cLW-qu-diu"/>
+                <constraint firstAttribute="trailing" secondItem="ikM-mg-dpj" secondAttribute="trailing" id="giq-q1-nBU"/>
+                <constraint firstItem="ikM-mg-dpj" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="uhp-XJ-o5V"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="backgroundLogin" width="375" height="667"/>
+    </resources>
+</document>
