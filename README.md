@@ -5,4 +5,7 @@ PartiuUFAL is an opensource project that aims to help college members to find ri
 In order to meet college member's needs, we made this form: https://goo.gl/forms/IzxAzTbtRFLYKKL62 
 _(If you have some time, answer it. We would appreciate your thoughts. :))_
 
+## License
+
 __This project is licensed under the terms of the MIT license.__
+See the [LICENSE](LICENSE.md) file for license rights and limitations.
