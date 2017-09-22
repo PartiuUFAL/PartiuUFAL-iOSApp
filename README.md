@@ -7,5 +7,5 @@ _(If you have some time, answer it. We would appreciate hearing your thoughts. :
 
 ## License
 
-__This project is licensed under the terms of the MIT license.__
+__This project is licensed under the terms of the AGPL-3.0 license.__
 See the [LICENSE](LICENSE.md) file for license rights and limitations.
